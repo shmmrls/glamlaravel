@@ -1,0 +1,76 @@
+.home-search {
+    padding: 60px 30px;
+    background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+}
+
+.home-search .page-header {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 40px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.home-search .page-header:hover {
+    border-color: rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.home-search .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #0a0a0a;
+}
+
+.home-search .page-subtitle {
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home-search .header-content {
+    justify-content: center;
+    text-align: center;
+}
+
+.search-container { max-width: 600px; margin: 0 auto; }
+
+.home-search-form { display: flex; gap: 15px; align-items: center; }
+
+.search-box { position: relative; flex: 1; }
+
+.search-box svg { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: rgba(0,0,0,0.4); pointer-events: none; }
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid rgba(0,0,0,0.15);
+    background: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #0a0a0a;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus { outline: none; border-color: #0a0a0a; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+.search-input::placeholder { color: rgba(0,0,0,0.4); }
+
+.btn-search {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; background: #0a0a0a; color: #ffffff; border: none;
+    font-size: 10px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500;
+    cursor: pointer; transition: all 0.3s ease; font-family: 'Montserrat', sans-serif; border-radius: 4px;
+}
+.btn-search:hover { background: #1a1a1a; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+@media (max-width: 768px) {
+    .home-search { padding: 40px 20px; }
+    .home-search .page-header { padding: 30px 20px; margin-bottom: 20px; }
+    .home-search .page-title { font-size: 24px; }
+    .home-search-form { flex-direction: column; gap: 15px; }
+    .btn-search { width: 100%; justify-content: center; padding: 15px 20px; }
+}

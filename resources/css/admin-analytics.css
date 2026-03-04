@@ -1,0 +1,241 @@
+/* Analytics Page Styles - Matching Dashboard Aesthetic */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: #ffffff; color: #1a1a1a; line-height: 1.6; }
+
+.analytics-page {
+    min-height: 100vh;
+    padding: 100px 30px 60px;
+    background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+}
+
+.analytics-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Analytics Header - Matching Dashboard Header Style */
+.analytics-header {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.analytics-header:hover {
+    border-color: rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.analytics-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #0a0a0a;
+}
+
+.analytics-subtitle {
+    font-size: 13px;
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 0.3px;
+}
+
+/* Date Filter Section - Matching Dashboard Card Style */
+.date-filter-section {
+    margin-bottom: 30px;
+}
+
+.filter-card {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.filter-card:hover {
+    border-color: rgba(0,0,0,0.12);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.filter-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #0a0a0a;
+    margin-bottom: 25px;
+    text-align: center;
+}   
+
+.date-filter-form {
+    display: flex;
+    justify-content: center;
+}
+
+.date-inputs {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+}
+
+.date-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.date-input-group label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgba(0,0,0,0.5);
+}
+
+.date-picker {
+    padding: 12px 15px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 150px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.date-picker:focus {
+    outline: none;
+    border-color: #0a0a0a;
+    box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.1);
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    background: #0a0a0a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-btn:hover {
+    background: #333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Charts Grid - Matching Dashboard Content Grid */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chart-section {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.chart-section:hover {
+    border-color: rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+}
+
+.chart-section.full-width {
+    grid-column: 1 / -1;
+}
+
+.chart-section.pie-chart-centered {
+    grid-column: 1 / -1;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-self: center;
+}
+
+.chart-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-container {
+    position: relative;
+}
+
+/* Responsive Design - Matching Dashboard Breakpoints */
+@media (max-width: 1200px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .analytics-page {
+        padding: 80px 20px 50px;
+    }
+    
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .date-inputs {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .analytics-header {
+        padding: 30px 25px;
+    }
+    
+    .analytics-title {
+        font-size: 26px;
+    }
+    
+    .filter-card {
+        padding: 30px 20px;
+    }
+    
+    .chart-section {
+        padding: 25px 20px;
+    }
+    
+    .filter-card h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .analytics-title {
+        font-size: 22px;
+    }
+    
+    .date-picker {
+        min-width: 100%;
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+    
+    .filter-card {
+        padding: 25px 15px;
+    }
+    
+    .chart-section {
+        padding: 20px 15px;
+    }
+}

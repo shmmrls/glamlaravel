@@ -1,3 +1,11 @@
+/* tailwindcss */
+@import './style.css';
+@import './footer.css';
+@import './admin-dashboard.css';
+@import './admin-analytics.css';  /* Add this line */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* etc. — shared/global ones here */

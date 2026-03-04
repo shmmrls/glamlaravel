@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             ProductImageSeeder::class,
             InventorySeeder::class,
+            SalesAnalyticsSeeder::class,
         ]);
     }
 }

@@ -33,12 +33,34 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'profile_picture' => ['nullable', 'image', 'mimes:jpeg,jpg,png,gif', 'max:5120'], // 5MB max
         ]);
+
+        // Handle profile picture upload
+        $imgName = 'nopfp.jpg'; // Default profile picture
+        
+        if ($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()) {
+            $file = $request->file('profile_picture');
+            $extension = $file->getClientOriginalExtension();
+            
+            // Create unique filename
+            $filename = 'user_' . time() . '_' . uniqid() . '.' . $extension;
+            
+            // Store the file in the public directory
+            $uploadPath = 'user/images/profile_pictures/' . $filename;
+            
+            if ($file->move(public_path('user/images/profile_pictures'), $filename)) {
+                $imgName = $filename;
+            }
+        }
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'img_name' => $imgName,
+            'role' => 'customer',
+            'is_active' => 1,
         ]);
 
         event(new Registered($user));

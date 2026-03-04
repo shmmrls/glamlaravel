@@ -71,7 +71,7 @@
         <div class="d-flex gap-2 flex-wrap mb-2">
             @foreach($product->images as $image)
             <div class="position-relative">
-                <img src="{{ asset('storage/product_images/' . $image->img_name) }}"
+                <img src="{{ asset('storage/products/' . $image->img_name) }}"
                      width="80" height="80" style="object-fit:cover;">
 
                 {{-- DELETE BUTTON (NO NESTED FORM) --}}

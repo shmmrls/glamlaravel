@@ -1,4 +1,5 @@
 import './bootstrap';
+import './components/header-extras.js';
 
 import Alpine from 'alpinejs';
 

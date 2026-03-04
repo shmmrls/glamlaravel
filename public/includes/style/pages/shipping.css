@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: #ffffff; color: #1a1a1a; line-height: 1.6; }
+.shipping-page { min-height: 100vh; padding: 100px 30px 60px; background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%); }
+.shipping-container { max-width: 1000px; margin: 0 auto; }
+.shipping-header { text-align: center; margin-bottom: 50px; }
+.shipping-title { font-family: 'Playfair Display', serif; font-size: 46px; font-weight: 400; color: #0a0a0a; margin-bottom: 10px; }
+.shipping-subtitle { font-size: 14px; color: rgba(0,0,0,0.55); }
+.shipping-section { background: #ffffff; border: 1px solid rgba(0,0,0,0.08); padding: 28px; margin-bottom: 18px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: #0a0a0a; margin-bottom: 14px; }
+.section-content p { font-size: 14px; color: rgba(0,0,0,0.75); }
+.section-content ul { padding-left: 18px; }
+.section-content li { font-size: 14px; color: rgba(0,0,0,0.78); margin-bottom: 8px; }
+.section-content a { color: #0a0a0a; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,0.2); transition: all 0.3s ease; }
+.section-content a:hover { border-bottom-color: #0a0a0a; }
+@media (max-width: 768px) { .shipping-page { padding: 80px 20px 50px; } .shipping-title { font-size: 34px; } .section-title { font-size: 20px; } }
